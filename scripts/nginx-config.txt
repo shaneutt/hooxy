@@ -10,7 +10,8 @@ server {
     ssl_trusted_certificate /usr/share/ssl/certs/ca-bundle-2008.txt;    gzip on;
     gzip_proxied any;
     gzip_buffers 16 32k;
-    gzip_types text/css text/javascript application/javascript;    location / {
+    gzip_types text/css text/javascript application/javascript;
+    location / {
         proxy_pass http://127.0.0.1:8080;
     }
 }
